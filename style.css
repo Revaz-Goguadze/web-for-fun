@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial,sans-serif;
+}
+
+.nav{
+    background-color:rgb(175, 29, 29);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    width: 100%; /* Make the navigation bar full width */
+    position: fixed; /* Keep the navigation bar fixed at the top */
+    top: 0; /* Position the navigation bar at the top */
+    left: 0; /* Position the navigation bar at the left */
+    z-index: 1000; /* Ensure the navigation bar is on top of other content */
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    margin: 0 15px;
+}
+
+.nav-list li a{
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover{
+    color:black;
+}
+
+
+
+.search-bar{
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.rest {
+    text-align: center;
+    padding: 50px;
+    margin-top:40px
+}
+
+.rest h1{
+    color: black;
+}
+
+.fire-text {
+    color:rgb(207, 160, 160);
+    font-size: 3rem;
+    position: relative;
+    animation: fireAnimation 2s infinite alternate;
+}
+
+@keyframes fireAnimation {
+    0% {
+        opacity: 0.8;
+        text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.7), 0px 0px 20px rgba(255, 0, 0, 0.5), 0px 0px 30px rgba(255, 0, 0, 0.3);
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.9), 0px 0px 20px rgba(255, 0, 0, 0.7), 0px 0px 30px rgba(255, 0, 0, 0.5);
+    }
+}
+
+
+/*  MENU */
+
+
+.menu{
+    margin-top:20px;
+}
+
+/* Style for the burger container */
+
+.star {
+    font-size: 1.5rem;
+    color: gold;
+    margin-right: 5px;
+}
+
+.start-empty {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+.burger {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative; /* Add this to establish a positioning context */
+    margin-left:13px ;
+  }
+
+  .burger img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  .description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(140, 185, 228, 0.8);
+    color: black;
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .burger:hover .description {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .pizza{
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative; 
+    margin-left: 10px;
+  }
+
+  .pizza img{
+    display: block;
+    max-width: 100%;
+  }
+
+  .pizza:hover .description{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .salad{
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative; 
+    margin-left: 10px;
+  }
+  .salad img{
+    display: block;
+    max-width: 100%;
+  }
+
+  .salad:hover .description{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  .carbonara{
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative; 
+    margin-left: 10px;
+  }
+  .carbonara img{
+    display: block;
+    max-width: 100%;
+  }
+
+  .carbonara:hover .description{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fondant{
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative; 
+    margin-left: 10px;
+  }
+  .fondant img{
+    display: block;
+    max-width: 100%;
+  }
+  .fondant:hover .description{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .ice-cream{
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative; 
+    margin-left: 10px;
+  }
+  .ice-cream img{
+    display: block;
+    max-width: 100%;
+  }
+  .ice-cream:hover .description{
+    opacity: 1;
+    transform: translateY(0);
+  }
+/* Apply background color and set position */
+.scrollable-content {
+    min-height: calc(100vh - 60px); /* Subtract the height of the navigation bar */
+    box-sizing: border-box;
+    padding-bottom: 100px; /* Add padding to ensure the bottom content is visible */
+    overflow-y: auto; /* Add vertical scrollbar if content exceeds viewport */
+    position: relative; /* Set position to relative */
+}
+
+#service-section {
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Ensure the section spans the entire width */
+    padding: 20px; /* Add some padding for better appearance */
+    text-align: left; /* Align text to the left */
+}
+  /* Center-align the content in the section */
+#service-section h2,
+#service-section p {
+    text-align: left;
+}
+
+
+.menu {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent items from wrapping */
+  margin-top: 20px;
+}
+
+/* Rest of your existing styles... */
+
+.burger,
+.pizza,
+.salad,
+.carbonara,
+.fondant,
+.ice-cream {
+  /* Rest of your existing styles... */
+  transition: transform 0.3s ease; /* Add a transition for smooth sliding */
+}
